@@ -1,595 +1,2228 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Build Club — SNPSU</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #0a1628;
-    --navy-mid: #0d1f3c;
-    --gold: #b8892a;
-    --gold-light: #d4a843;
-    --gold-pale: #f0d080;
-    --white: #ffffff;
-    --off-white: #f4f1eb;
-    /* LIGHT THEME for left/body */
-    --body-bg: #f0f2f5;
-    --text-dark: #0a1628;
-    --text-mid: #2c3e5a;
-    --text-muted-light: #5a6a84;
-    --border-light: #d0d8e8;
-  }
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sapthagiri NPS University</title>
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta name="keywords" content="Sapthagiri NPS University">
+    <meta name="description" content="Sapthagiri NPS University">
+    
+    <meta property="og:title" content="Sapthagiri NPS University">
+    <meta property="og:description" content="Sapthagiri NPS University">
+    <meta property="og:url" content="https://snpsu.edu.in/">
+    <meta property="og:image" content="https://snpsu.edu.in/images/logo.webp">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://snpsu.edu.in/hrd">
 
-  body {
-    background: var(--body-bg);
-    color: var(--text-dark);
-    font-family: 'Barlow', sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+    
+    
+    <link href="https://snpsu.edu.in/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="https://snpsu.edu.in/css/header-style.css" type="text/css" rel="stylesheet">
 
-  /* ── TOP UNIVERSITY BAR ── */
-  .univ-bar {
-    background: var(--navy-mid);
-    border-bottom: 1px solid rgba(184,137,42,0.25);
-    padding: 10px 48px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    position: relative; z-index: 10;
-  }
-  .univ-logo-box {
-    width: 38px; height: 38px;
-    background: rgba(184,137,42,0.2);
-    border: 1px solid rgba(184,137,42,0.4);
-    border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-  }
-  .univ-bar-text {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    color: rgba(255,255,255,0.5);
-    text-transform: uppercase;
-  }
-  .univ-bar-text strong {
-    display: block;
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.8);
-    letter-spacing: 0.1em;
-  }
-  .univ-bar-right {
-    margin-left: auto;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    color: var(--gold);
-    text-transform: uppercase;
-    opacity: 0.8;
-  }
+<link rel="stylesheet" href="https://snpsu.edu.in/css/hrd-style.css" type="text/css"><link rel="stylesheet" href="https://snpsu.edu.in/css/main-style.css" type="text/css">
 
-  /* ── MAIN WRAPPER ── */
-  .hero {
-    position: relative;
-    min-height: calc(100vh - 60px);
-    display: grid;
-    grid-template-columns: 1fr 420px;
-    gap: 0;
-    z-index: 1;
-    overflow: hidden;
-  }
+    <link href="https://snpsu.edu.in/css/responsive.css" type="text/css" rel="stylesheet">
+    <!--main menu-->
+    <link rel="stylesheet" href="https://snpsu.edu.in/css/menu-style.css" type="text/css">
+    <!--main menu-->
+	<link rel="stylesheet" href="https://snpsu.edu.in/css/main-menu.css">
+    <link rel="stylesheet" href="https://snpsu.edu.in/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://snpsu.edu.in/css/owl.theme.default.min.css">
+    
+    <!--for main menu bar--> 
+	<link href="https://snpsu.edu.in/css/pushy.css" type="text/css" rel="stylesheet">
+    <link href="https://snpsu.edu.in/css/main-menu.css" type="text/css" rel="stylesheet">
+    <!--for main menu bar-->
 
-  /* DIAGONAL GOLD LINE decoration */
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0;
-    left: calc(100% - 420px - 1px);
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
-    opacity: 0.4;
-  }
+    <link rel="stylesheet" href="https://snpsu.edu.in/css/swiper-bundle.css">
 
-  /* ── LEFT CONTENT — LIGHT ── */
-  .left {
-    padding: 64px 60px 80px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    background: var(--body-bg);
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script>
+	
+	window.onscroll = function() {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.classList.add("shrunk");
+  } else {
+    header.classList.remove("shrunk");
   }
+};
+	</script>
+  <script src="https://www.googletagmanager.com/gtag/js?id=G-H74KY38NCR"></script><style>._button_10caf_25{border-radius:8px;border:unset;cursor:pointer;transition:.3s}._button_10caf_25:disabled{opacity:.3;cursor:not-allowed}._button_default_10caf_35{background:transparent;color:#43434e}._button_default_10caf_35:hover{background:#f3f4f7}._button_default_10caf_35:active{background:#8e8e8e}._button_default_10caf_35 ._svg_10caf_45 *{fill:#43434e}._button_primary_10caf_48{background:#007eff;color:#fff}._button_primary_10caf_48:hover{background:#3398ff}._button_primary_10caf_48:active{background:#66b2ff}._button_primary_10caf_48 ._svg_10caf_45 *{fill:#fff}._button_link_10caf_61{background:transparent;color:#007eff}._button_link_10caf_61:hover{color:#3398ff}._button_link_10caf_61:active{color:#66b2ff}._button_link_10caf_61 ._svg_10caf_45 *{fill:#007eff}._button_link_10caf_61 ._svg_10caf_45 *:hover{fill:#3398ff}._button_link_10caf_61 ._svg_10caf_45 *:active{fill:#66b2ff}._button_large_10caf_80{padding:12px 16px}._button_large_10caf_80 *{font-size:16px}._button_medium_10caf_86{padding:8px 16px}._button_medium_10caf_86 *{font-size:16px}._button_small_10caf_92{padding:4px;min-height:24px}._button_small_10caf_92 *{font-size:12px}._flexBox_9xdww_14{flex-flow:unset}._gap_extraTiny_9xdww_18{gap:2px}._gap_tiny_9xdww_22{gap:4px}._gap_extraSmall_9xdww_26{gap:6px}._gap_small_9xdww_30{gap:8px}._gap_medium_9xdww_34{gap:16px}._gap_normal_9xdww_38{gap:24px}._gap_large_9xdww_42{gap:32px}._gap_xLarge_9xdww_46{gap:48px}._gap_xxLarge_9xdww_50{gap:56px}._gap_extraLarge_9xdww_54{gap:64px}._column_9xdww_58{flex-direction:column!important}._flexWrap_9xdww_62{flex-wrap:wrap}._popover_12uvb_1{position:fixed;padding:8px 10px;z-index:2147483647;background:#31363de6;border-radius:4px;color:#fff;font-size:14px}._buttons_12uvb_11{position:fixed;top:0;right:0;padding:8px;z-index:2147483647}._popup_hcu7e_1{position:fixed;z-index:2147483649;background:#ffffffe6;border-radius:4px;color:#000;font-size:14px;line-height:1.286;width:350px;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);box-shadow:0 0 7px -5px #000}._popup_hcu7e_1:before{border-color:rgba(255,255,255,.9) transparent;border-width:0 7px 7px 7px;left:7px;top:-7px;border-style:solid;content:".";display:block;height:0;position:absolute;text-indent:-30000px;width:0}._color_hcu7e_27{width:20px;height:20px;cursor:pointer;flex-shrink:0}._styleContainer_hcu7e_34{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}._extraTiny_dg7lc_14{padding:2px}._extraTinyVR_dg7lc_18{padding-top:2px;padding-bottom:2px}._extraTinyHR_dg7lc_23{padding-left:2px;padding-right:2px}._extraTinyTop_dg7lc_28{padding-top:2px}._extraTinyRight_dg7lc_32{padding-right:2px}._extraTinyBottom_dg7lc_36{padding-bottom:2px}._extraTinyLeft_dg7lc_40{padding-left:2px}._tiny_dg7lc_44{padding:4px}._tinyVR_dg7lc_48{padding-top:4px;padding-bottom:4px}._tinyHR_dg7lc_53{padding-left:4px;padding-right:4px}._tinyTop_dg7lc_58{padding-top:4px}._tinyRight_dg7lc_62{padding-right:4px}._tinyBottom_dg7lc_66{padding-bottom:4px}._tinyLeft_dg7lc_70{padding-left:4px}._extraSmall_dg7lc_74{padding:6px}._extraSmallVR_dg7lc_78{padding-top:6px;padding-bottom:6px}._extraSmallHR_dg7lc_83{padding-left:6px;padding-right:6px}._extraSmallTop_dg7lc_88{padding-top:6px}._extraSmallRight_dg7lc_92{padding-right:6px}._extraSmallBottom_dg7lc_96{padding-bottom:6px}._extraSmallLeft_dg7lc_100{padding-left:6px}._small_dg7lc_104{padding:8px}._smallVR_dg7lc_108{padding-top:8px;padding-bottom:8px}._smallHR_dg7lc_113{padding-left:8px;padding-right:8px}._smallTop_dg7lc_118{padding-top:8px}._smallRight_dg7lc_122{padding-right:8px}._smallBottom_dg7lc_126{padding-bottom:8px}._smallLeft_dg7lc_130{padding-left:8px}._medium_dg7lc_134{padding:16px}._mediumVR_dg7lc_138{padding-top:16px;padding-bottom:16px}._mediumHR_dg7lc_143{padding-left:16px;padding-right:16px}._mediumTop_dg7lc_148{padding-top:16px}._mediumRight_dg7lc_152{padding-right:16px}._mediumBottom_dg7lc_156{padding-bottom:16px}._mediumLeft_dg7lc_160{padding-left:16px}._normal_dg7lc_164{padding:24px}._normalVR_dg7lc_168{padding-top:24px;padding-bottom:24px}._normalHR_dg7lc_173{padding-left:24px;padding-right:24px}._normalTop_dg7lc_178{padding-top:24px}._normalRight_dg7lc_182{padding-right:24px}._normalBottom_dg7lc_186{padding-bottom:24px}._normalLeft_dg7lc_190{padding-left:24px}._large_dg7lc_194{padding:32px}._largeVR_dg7lc_198{padding-top:32px;padding-bottom:32px}._largeHR_dg7lc_203{padding-left:32px;padding-right:32px}._largeTop_dg7lc_208{padding-top:32px}._largeRight_dg7lc_212{padding-right:32px}._largeBottom_dg7lc_216{padding-bottom:32px}._largeLeft_dg7lc_220{padding-left:32px}._xLarge_dg7lc_224{padding:48px}._xLargeVR_dg7lc_228{padding-top:48px;padding-bottom:48px}._xLargeHR_dg7lc_233{padding-left:48px;padding-right:48px}._xLargeTop_dg7lc_238{padding-top:48px}._xLargeRight_dg7lc_242{padding-right:48px}._xLargeBottom_dg7lc_246{padding-bottom:48px}._xLargeLeft_dg7lc_250{padding-left:48px}._xxLarge_dg7lc_254{padding:56px}._xxLargeVR_dg7lc_258{padding-top:56px;padding-bottom:56px}._xxLargeHR_dg7lc_263{padding-left:56px;padding-right:56px}._xxLargeTop_dg7lc_268{padding-top:56px}._xxLargeRight_dg7lc_272{padding-right:56px}._xxLargeBottom_dg7lc_276{padding-bottom:56px}._xxLargeLeft_dg7lc_280{padding-left:56px}._extraLarge_dg7lc_284{padding:64px}._extraLargeVR_dg7lc_288{padding-top:64px;padding-bottom:64px}._extraLargeHR_dg7lc_293{padding-left:64px;padding-right:64px}._extraLargeTop_dg7lc_298{padding-top:64px}._extraLargeRight_dg7lc_302{padding-right:64px}._extraLargeBottom_dg7lc_306{padding-bottom:64px}._extraLargeLeft_dg7lc_310{padding-left:64px}._size_tiny_ldink_23,._size_tiny_ldink_23 *{font-size:12px}._size_small_ldink_27,._size_small_ldink_27 *{font-size:16px}._size_medium_ldink_31,._size_medium_ldink_31 *{font-size:18px}._size_large_ldink_35,._size_large_ldink_35 *{font-size:32px}._weight_thin_ldink_39,._weight_thin_ldink_39 *{font-weight:100}._weight_extraLight_ldink_43,._weight_extraLight_ldink_43 *{font-weight:200}._weight_light_ldink_47,._weight_light_ldink_47 *{font-weight:300}._weight_normal_ldink_51,._weight_normal_ldink_51 *{font-weight:400}._weight_medium_ldink_55,._weight_medium_ldink_55 *{font-weight:500}._weight_semiBold_ldink_59,._weight_semiBold_ldink_59 *{font-weight:600}._weight_bold_ldink_63,._weight_bold_ldink_63 *{font-weight:700}._weight_extraBold_ldink_67,._weight_extraBold_ldink_67 *{font-weight:800}._lineHeight_ldink_71{line-height:100%}._secondary_ldink_75{color:#8e8e8e}._modal_ib2ay_25{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;z-index:2147483649}._modal_ib2ay_25 ._background_ib2ay_36{position:absolute;top:0;left:0;width:100%;height:100%;transition:.3s;opacity:0;overflow:auto;background-color:color-mix(in srgb,#000000 60%,white 0%);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}._modal_ib2ay_25 ._window_ib2ay_48{min-width:280px;max-width:560px;background:#fff;border-radius:6px;padding:16px;z-index:1;position:relative;opacity:0;transform:scale(.01);transition:.3s;display:flex;flex-direction:column;box-shadow:0 2px 6px 2px #00000026,0 1px 2px #0000004d;overflow:auto}._modal_ib2ay_25 ._window_ib2ay_48 ._loading_ib2ay_64{position:absolute;width:100%;height:100%;top:0;left:0;background:#000000b3}._modal_ib2ay_25 ._window_ib2ay_48 ._loading_ib2ay_64 img{width:100px}._modal_visible_ib2ay_76 ._background_ib2ay_36{opacity:1}._modal_visible_ib2ay_76 ._window_ib2ay_48{opacity:1;transform:scale(1)}._modal_hidden_ib2ay_83 ._background_ib2ay_36{opacity:0}._modal_hidden_ib2ay_83 ._window_ib2ay_48{opacity:0;transform:scale(.01)}._modal_hiddenDone_ib2ay_90 ._background_ib2ay_36{opacity:0}._modal_hiddenDone_ib2ay_90 ._window_ib2ay_48{opacity:0;transform:scale(.01)}._color_13dyv_1{padding:0 8px;border-radius:8px;width:100%;box-shadow:0 0 7px -5px #000;font-weight:800;flex-shrink:0}
+</style></head>
 
-  .club-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 24px;
-    animation: fadeUp 0.8s ease both;
-  }
-  .club-eyebrow::before {
-    content: '';
-    display: block;
-    width: 32px; height: 1px;
-    background: var(--gold);
-  }
+  <body class="device-md">
+  <div class="pdng-top"></div>     
 
-  .club-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(64px, 8vw, 110px);
-    line-height: 0.9;
-    letter-spacing: 0.04em;
-    color: var(--text-dark);
-    animation: fadeUp 0.8s 0.1s ease both;
-    margin-bottom: 6px;
-  }
-  .club-title span {
-    color: var(--gold);
-  }
+<header class="">
 
-  .club-subtitle {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.15rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-muted-light);
-    margin-bottom: 36px;
-    animation: fadeUp 0.8s 0.18s ease both;
-  }
+<section id="top-blue-bg">
+  <div class="container d-flex">
+    <div class="top-link-importnts">
+       
+      <ul>
+                   <li> 
+</li>
+                </ul>    
+    </div>  
+  </div>  
+</section> 
 
-  .divider {
-    width: 60px; height: 2px;
-    background: linear-gradient(to right, var(--gold), transparent);
-    margin-bottom: 30px;
-    animation: expandW 1s 0.3s ease both;
-  }
 
-  .tagline {
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.75;
-    color: var(--text-mid);
-    max-width: 540px;
-    margin-bottom: 40px;
-    animation: fadeUp 0.8s 0.3s ease both;
-  }
-  .tagline strong {
-    color: var(--text-dark);
-    font-weight: 600;
-  }
+<section id="mob-item_links">
+  <div class="container">
+    <div id="owl-demo-2" class="owl-carousel owl-theme owl-loaded owl-drag">  
+      
+            
+               
+               
+               
+       	  <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-369px, 0px, 0px); transition: 0.25s; width: 1154px;"><div class="owl-item cloned" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://snpsu.edu.in/uploads/Important/brochure_20260413030016.pdf  " target="_blank" class="btn btn-warning hderbuttons_1s"> Brochure </a> </div>
+        </div></div><div class="owl-item cloned" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://snpsu.edu.in/login  " target="_blank" class="btn btn-warning hderbuttons_1s"> Login </a> </div>
+        </div></div><div class="owl-item cloned" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://snpsu.edu.in/admission  " target="_blank" class="btn btn-warning hderbuttons_1s"> Admission 2026-2027 </a> </div>
+        </div></div><div class="owl-item active" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://admission.snpsu.edu.in/  " class="btn btn-warning hderbuttons_1s"> Apply Now </a> </div>
+        </div></div><div class="owl-item active" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://snpsu.edu.in/uploads/Important/brochure_20260413030016.pdf  " target="_blank" class="btn btn-warning hderbuttons_1s"> Brochure </a> </div>
+        </div></div><div class="owl-item active" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://snpsu.edu.in/login  " target="_blank" class="btn btn-warning hderbuttons_1s"> Login </a> </div>
+        </div></div><div class="owl-item active" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://snpsu.edu.in/admission  " target="_blank" class="btn btn-warning hderbuttons_1s"> Admission 2026-2027 </a> </div>
+        </div></div><div class="owl-item cloned active" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://admission.snpsu.edu.in/  " class="btn btn-warning hderbuttons_1s"> Apply Now </a> </div>
+        </div></div><div class="owl-item cloned active" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://snpsu.edu.in/uploads/Important/brochure_20260413030016.pdf  " target="_blank" class="btn btn-warning hderbuttons_1s"> Brochure </a> </div>
+        </div></div><div class="owl-item cloned active" style="width: auto; margin-right: 10px;"><div class="item">
+          <div class="hder-logo-on-buttons_1s-"> <a href="https://snpsu.edu.in/login  " target="_blank" class="btn btn-warning hderbuttons_1s"> Login </a> </div>
+        </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous"><img src="images/left-arrw.png" class="img-fluid" alt="Left arrow"></span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next"><img src="images/right-arrw.png" class="img-fluid" alt="Right arrow"></span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div> 
+  </div>  
+</section>  
 
-  /* Domain chips */
-  .domains {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 44px;
-    animation: fadeUp 0.8s 0.4s ease both;
-  }
-  .domain-chip {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 7px 16px;
-    border: 1px solid rgba(184,137,42,0.4);
-    border-radius: 2px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-mid);
-    background: rgba(184,137,42,0.07);
-    transition: all 0.25s;
-  }
-  .domain-chip:hover {
-    border-color: var(--gold);
-    color: var(--navy);
-    background: rgba(184,137,42,0.14);
-  }
-  .domain-chip .icon { font-size: 1rem; }
 
-  /* Stats row */
-  .stats-row {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 52px;
-    animation: fadeUp 0.8s 0.5s ease both;
-  }
-  .stat { border-left: 2px solid var(--gold); padding-left: 14px; }
-  .stat-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem;
-    line-height: 1;
-    color: var(--gold-light);
-    letter-spacing: 0.05em;
-  }
-  .stat-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-muted-light);
-    margin-top: 3px;
-  }
+<section id="hder-logo-menu-buttons">
+  <div class="container d-flex">
+    <div class="logo-sapthagiri"><a href="https://snpsu.edu.in/"> <img src="https://snpsu.edu.in/images/logo.webp" class="img-fluid" alt="sapthagiri logo" loading="lazy"></a> </div>
+    <div class="bttn-rgt-hder d-flex">
 
-  /* CTA Button */
-  .cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 36px;
-    background: var(--gold);
-    color: var(--navy);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s;
-    animation: fadeUp 0.8s 0.6s ease both;
-    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-  }
-  .cta-btn::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: var(--gold-pale);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.35s ease;
-  }
-  .cta-btn:hover::before { transform: scaleX(1); }
-  .cta-btn span { position: relative; z-index: 1; }
-  .cta-btn .arrow {
-    position: relative; z-index: 1;
-    display: inline-block;
-    transition: transform 0.25s;
-  }
-  .cta-btn:hover .arrow { transform: translateX(5px); }
 
-  /* Achievement badge */
-  .achievement {
-    margin-top: 40px;
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    padding: 12px 20px;
-    border: 1px solid rgba(184,137,42,0.35);
-    background: rgba(184,137,42,0.06);
-    animation: fadeUp 0.8s 0.7s ease both;
-  }
-  .achievement-icon {
-    width: 36px; height: 36px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
-  .achievement-text { font-size: 0.82rem; color: var(--text-mid); line-height: 1.5; }
-  .achievement-text strong { color: var(--navy); font-size: 0.85rem; display: block; }
+              <div class="hder-logo-on-buttons_1s"> <a href="https://admission.snpsu.edu.in/  " class="btn btn-warning hderbuttons_1s"> Apply Now </a> </div>
+          
+                <div class="hder-logo-on-buttons_1s"> <a href="https://snpsu.edu.in/uploads/Important/brochure_20260413030016.pdf  " target="_blank" class="btn btn-warning hderbuttons_1s"> Brochure </a> </div>
+          
+                <div class="hder-logo-on-buttons_1s"> <a href="https://snpsu.edu.in/login  " target="_blank" class="btn btn-warning hderbuttons_1s"> Login </a> </div>
+          
+                <div class="hder-logo-on-buttons_1s"> <a href="https://snpsu.edu.in/admission  " target="_blank" class="btn btn-warning hderbuttons_1s"> Admission 2026-2027 </a> </div>
+          
+            <div class="hder-logo-on-buttons_1s main-menu-box"> 
+        <div class="hero">
 
-  /* ── RIGHT PANEL — STAYS DARK ── */
-  .right {
-    background: linear-gradient(175deg, #0d1f3c 0%, #071020 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 36px;
-    padding: 60px 40px;
-    position: relative;
-    overflow: hidden;
-    animation: fadeIn 1s 0.2s ease both;
-  }
+        <div class="menu-btn">
+        <a href="#" class="btn btn-warning hderbuttons_1s"> <svg width="23" height="23" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"></path>
+</svg> MENU </a> </div> </div> </div>
+    </div>  
+  </div>  
+</section>  
 
-  .right::before {
-    content: '';
-    position: absolute;
-    top: 20px; right: 20px;
-    width: 60px; height: 60px;
-    border-top: 1px solid rgba(184,137,42,0.4);
-    border-right: 1px solid rgba(184,137,42,0.4);
-  }
-  .right::after {
-    content: '';
-    position: absolute;
-    bottom: 20px; left: 20px;
-    width: 60px; height: 60px;
-    border-bottom: 1px solid rgba(184,137,42,0.4);
-    border-left: 1px solid rgba(184,137,42,0.4);
-  }
 
-  .logo-glow {
-    position: absolute;
-    width: 280px; height: 280px;
-    background: radial-gradient(circle, rgba(184,137,42,0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: pulse 4s ease-in-out infinite;
-  }
 
-  .club-logo-wrap {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-  }
+<!-- MAIN MENU BAR -->
 
-  .club-logo-frame {
-    width: 200px; height: 200px;
-    border: 1px solid rgba(184,137,42,0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background: rgba(255,255,255,0.03);
-    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
-  }
 
-  .spin-ring {
-    position: absolute; inset: -14px;
-    border: 1px dashed rgba(184,137,42,0.3);
-    border-radius: 50%;
-    animation: spin 20s linear infinite;
-  }
-  .spin-ring::before {
-    content: '';
-    position: absolute;
-    top: -3px; left: 50%;
-    width: 6px; height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    transform: translateX(-50%);
-  }
 
-  .club-logo-inner {
-    width: 155px; height: 155px;
-    background: #111;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 6px;
-  }
 
-  .shield {
-    width: 50px; height: 55px;
-    background: linear-gradient(135deg,#fff 0%,#ccc 100%);
-    clip-path: polygon(50% 0%,100% 18%,100% 65%,50% 100%,0% 65%,0% 18%);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 4px;
-  }
-  .shield-inner {
-    width: 30px; height: 34px;
-    background: #111;
-    clip-path: polygon(50% 0%,100% 18%,100% 65%,50% 100%,0% 65%,0% 18%);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--gold); font-size: 0.8rem; font-weight: 900;
-  }
-  .logo-univ { font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
-  .logo-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.25em; color: #fff; line-height: 1; }
 
-  .club-name-badge { text-align: center; }
-  .club-name-badge .name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.2em; color: #fff; }
-  .club-name-badge .tagline-sm { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-top: 2px; }
 
-  /* Domains vertical list */
-  .right-domains {
-    display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 280px;
-  }
-  .right-domain-item {
-    display: flex; align-items: center; gap: 12px;
-    padding: 10px 14px; border-left: 2px solid transparent;
-    transition: all 0.25s; cursor: default;
-  }
-  .right-domain-item:hover {
-    border-left-color: var(--gold);
-    background: rgba(184,137,42,0.07);
-  }
-  .right-domain-item .di-icon {
-    width: 32px; height: 32px;
-    background: rgba(184,137,42,0.1);
-    border: 1px solid rgba(184,137,42,0.25);
-    border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.95rem; flex-shrink: 0;
-  }
-  .right-domain-item .di-text {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.82rem; letter-spacing: 0.1em;
-    text-transform: uppercase; color: rgba(255,255,255,0.65);
-  }
+<nav id="navArea" class="">
 
-  /* ── BOTTOM BANNER ── */
-  .bottom-banner {
-    position: relative; z-index: 2;
-    background: var(--navy-mid);
-    border-top: 1px solid rgba(184,137,42,0.2);
-    padding: 22px 60px;
-    display: flex; align-items: center; gap: 24px; overflow: hidden;
-  }
-  .bottom-banner::before {
-    content: 'BUILD. INNOVATE. DOMINATE.  ·  BUILD. INNOVATE. DOMINATE.  ·  BUILD. INNOVATE. DOMINATE.  ·  BUILD. INNOVATE. DOMINATE.';
-    position: absolute; inset: 0;
-    display: flex; align-items: center;
-    font-family: 'Bebas Neue', sans-serif; font-size: 0.9rem;
-    letter-spacing: 0.3em; color: rgba(184,137,42,0.06);
-    white-space: nowrap; overflow: hidden; padding: 0 20px;
-  }
-  .banner-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
-  .banner-motto { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.22em; color: #fff; position: relative; z-index: 1; }
-  .banner-motto span { color: var(--gold); }
-  .banner-explore-btn {
-    margin-left: auto;
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 12px 28px;
-    border: 1px solid var(--gold); color: var(--gold);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-    text-decoration: none; position: relative; z-index: 1;
-    transition: all 0.3s; background: transparent; cursor: pointer;
-  }
-  .banner-explore-btn:hover { background: var(--gold); color: var(--navy); }
-  .banner-explore-btn svg { transition: transform 0.25s; }
-  .banner-explore-btn:hover svg { transform: translateX(4px); }
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; } to { opacity: 1; }
-  }
-  @keyframes expandW {
-    from { transform: scaleX(0); } to { transform: scaleX(1); }
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  @keyframes pulse {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50%       { opacity: 1;   transform: scale(1.08); }
-  }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero::after { display: none; }
-    .right { flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 40px 24px; min-height: auto; }
-    .right-domains { flex-direction: row; flex-wrap: wrap; max-width: 100%; }
-    .left { padding: 40px 24px; }
-    .univ-bar { padding: 10px 24px; }
-    .bottom-banner { padding: 18px 24px; }
-  }
-</style>
-</head>
-<body>
 
-<!-- University Top Bar -->
- 
+<section id="header-top">
+  <div class="container-fluid">
+    <div class="logo-and-menu">
 
-<!-- Hero Section -->
-<div class="hero">
 
-  <!-- LEFT CONTENT -->
-  <div class="left">
-    <div class="club-eyebrow">Official Technical Society · SNPSU</div>
+   
+      <div class="header-right-items">
 
-    <h1 class="club-title">BUILD<br><span>CLUB</span></h1>
-    <p class="club-subtitle">Where Ideas Take Flight</p>
 
-    <div class="divider"></div>
+     <!--===========================menu==========================-->
 
-    <p class="tagline">
-      Build Club is more than a technical society — it's a <strong>launchpad for innovators</strong>. We bring together passionate students from all fields to explore, create, and lead with technology. Through hands-on projects, workshops, and teamwork, members master <strong>emerging technologies</strong> and turn ideas into real solutions.
-    </p>
 
-    <div class="domains">
-      <div class="domain-chip"><span class="icon">💻</span> Coding</div>
-      <div class="domain-chip"><span class="icon">🤖</span> Robotics</div>
-      <div class="domain-chip"><span class="icon">✈️</span> Aerospace</div>
-      <div class="domain-chip"><span class="icon">🚀</span> Startups</div>
-    </div>
 
-    <div class="stats-row">
-      <div class="stat">
-        <div class="stat-num">3+</div>
-        <div class="stat-label">Events Conducted</div>
+
+
+</div>
+
+<div class="menu active">
+  <span class="btn-closee_2"></span>
+  <!--for main menu bar-->
+
+ <nav id="sidebar_menu-">
+            
+
+<!-- ================= DESKTOP MEGA MENU ================= -->
+<nav class="mega-nav d-lg-block">
+
+  <div class="menu-logo-scttn">
+    <div class="mennu-bg-lft"></div>
+    <div class="row">
+      <div class="col-lg-2"> <img src="https://snpsu.edu.in/images/menu-logo.png" class="img-fluid" alt="logo" loading="lazy"> </div>
+      <div class="col-lg-10">
+      	<div class="bttn-rgt-hder d-flex inside-menubar">
+         
+              <div class="hder-logo-on-buttons_1s"> <a href="https://admission.snpsu.edu.in/ " class="btn btn-warning hderbuttons_1s"> Apply Now </a> </div>
+          
+                <div class="hder-logo-on-buttons_1s"> <a href="https://snpsu.edu.in/view-pdf/brochure " class="btn btn-warning hderbuttons_1s"> Brochure </a> </div>
+          
+                <div class="hder-logo-on-buttons_1s"> <a href="https://snpsu.edu.in/login " class="btn btn-warning hderbuttons_1s"> Login </a> </div>
+          
+                <div class="hder-logo-on-buttons_1s"> <a href="https://snpsu.edu.in/admission " class="btn btn-warning hderbuttons_1s"> Admission 2026-2027 </a> </div>
+          
+              </div>
       </div>
-      <div class="stat">
-        <div class="stat-num">ISRO</div>
-        <div class="stat-label">Challenge Qualified</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">∞</div>
-        <div class="stat-label">Ideas to Build</div>
-      </div>
-    </div>
+    </div>  
+  </div>  
 
-    <a class="cta-btn" href="#">
-      <span>Explore Build Club</span>
-      <span class="arrow">→</span>
-    </a>
 
-    <div class="achievement">
-      <div class="achievement-icon">🏆</div>
-      <div class="achievement-text">
-        <strong>ISRO Robotics Challenge — URSC 2025</strong>
-        Team Svayatt qualified in Round 1 — advancing autonomous drone technology.
-      </div>
-    </div>
+  <div class="row">
+  <div class="col-lg-3 left-bg-menus">
+<nav class="pushy pushy-left" data-focus="#first-link">
+  <div class="pushy-content">
+    <ul>
+
+
+
+  <!-- LEVEL 1 WITH SUBMENU -->
+  <li class="pushy-submenu pushy-submenu-closed">
+    <button id="first-link">
+      About SNPSU    </button>
+
+    <ul>
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/overviews">
+            Overview          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/visionandmission">
+            Vision and Mission          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/sponsoring-body">
+            Sponsoring Body          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/chancellor">
+            Chancellor          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/vice-chancellor">
+            Vice-chancellor          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/registrar">
+            Registrar          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/organogram">
+            Organogram          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/administration">
+            Leadership          </a>
+        </li>
+  
+
+      
+      
+    </ul>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 DIRECT LINK -->
+  <li class="pushy-link">
+    <a href="https://snpsu.edu.in/admission">
+      Admission    </a>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 WITH SUBMENU -->
+  <li class="pushy-submenu pushy-submenu-closed">
+    <button>
+      Academics    </button>
+
+    <ul>
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/engineering/">
+            School of Engineering &amp; Technology          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/management/">
+            School of Management Studies          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/science/">
+            School of Applied Science          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/medical/">
+            Schools of Medicine          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/hospital/">
+            Sapthagiri Hospital          </a>
+        </li>
+  
+
+      
+      
+    </ul>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 WITH SUBMENU -->
+  <li class="pushy-submenu pushy-submenu-closed">
+    <button>
+      Mandatory Disclosure    </button>
+
+    <ul>
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/view-pdf/proforma" target="_blank">
+            UGC Proforma          </a>
+        </li>
+  
+
+      
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://snpsu.edu.in/view-pdf/publicselfdisclosure" target="_blank">
+            Public Self-Disclosure          </a>
+        </li>
+  
+
+      
+      
+    </ul>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 DIRECT LINK -->
+  <li class="pushy-link">
+    <a href="https://snpsu.edu.in/iqac">
+      IQAC    </a>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 DIRECT LINK -->
+  <li class="pushy-link">
+    <a href="https://snpsu.edu.in/hrd">
+      Human Resource Development    </a>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 WITH SUBMENU -->
+  <li class="pushy-submenu pushy-submenu-closed">
+    <button>
+      Students Corner    </button>
+
+    <ul>
+      
+              
+  
+  
+        <!-- LEVEL 2 DIRECT LINK -->
+        <li class="pushy-link">
+          <a href="https://tedx.snpsu.edu.in/" target="_blank">
+            TEDx          </a>
+        </li>
+  
+
+      
+      
+    </ul>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 DIRECT LINK -->
+  <li class="pushy-link">
+    <a href="https://snpsu.edu.in/international_relations">
+      International Collaborations    </a>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 DIRECT LINK -->
+  <li class="pushy-link">
+    <a href="https://snpsu.edu.in/events-list">
+      Calendar of Events    </a>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 DIRECT LINK -->
+  <li class="pushy-link">
+    <a href="https://snpsu.edu.in/research">
+      Research &amp; Innovation     </a>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 DIRECT LINK -->
+  <li class="pushy-link">
+    <a href="https://snpsu.edu.in/sports">
+      Sports    </a>
+  </li>
+
+
+
+
+  <!-- LEVEL 1 DIRECT LINK -->
+  <li class="pushy-link">
+    <a href="https://snpsu.edu.in/student_affairs">
+      Student Affairs    </a>
+  </li>
+
+
+    </ul>
   </div>
+</nav>
 
-  <!-- RIGHT PANEL -->
-  <div class="right">
-    <div class="logo-glow"></div>
+  </div>  
+  <div class="col-lg-9">
+    <div id="megamennu-wd_announcemnt">
+    	<div class="megga-menu-hdd">
+        	<h4> Explore </h4>
+            <h5> Daily Updates </h5>
+        </div>
+        <div class="megga-menu-hdd_text-iitm">
+        	<div class="updates-section py-5 text-white">
 
-    <div class="club-logo-wrap">
-      <div class="club-logo-frame">
-        <div class="spin-ring"></div>
-        <div class="club-logo-inner">
-          <div class="shield"><div class="shield-inner">S</div></div>
-          <div class="logo-univ">Sapthagiri NPS</div>
-          <div class="logo-name">BUILD CLUB</div>
+
+          
+                <div class="row g-4">
+
+                
+                                                      <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">Invited Applications for All Courses </h3>
+                        <a href="https://admission.snpsu.edu.in/" target="_blank" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">Admission </h3>
+                        <a href="https://snpsu.edu.in/admisssionn" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">1st trimeter MBA Time Table Table – March 2026 </h3>
+                        <a href="https://snpsu.edu.in/view-pdf/timetable" target="_blank" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">BBA I II and III Sem Examination Time Table DEC 2025 </h3>
+                        <a href="https://snpsu.edu.in/view-pdf/bbaa" target="_blank" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">3rd Sem MCA Time Table – March 2026 </h3>
+                        <a href="https://snpsu.edu.in/view-pdf/3rdsem-" target="_blank" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">MBA I Trimester Practical Exam Time Table – March 2026 </h3>
+                        <a href="https://snpsu.edu.in/view-pdf/mbatrisemester" target="_blank" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">BE 1st Sem (2025 Scheme) Exam Time Table March-2026 </h3>
+                        <a href="https://snpsu.edu.in/view-pdf/beistsem" target="_blank" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">Backlog Time Table (2024 Scheme) March 2026 </h3>
+                        <a href="https://snpsu.edu.in/view-pdf/backlog-" target="_blank" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">TIME TABLE FOR BE 3rd SEMESTER EXAMINATION, Jan-2026 </h3>
+                        <a href="#" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                                                         <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">MBA I II III Trimester examination Time Table </h3>
+                        <a href="https://snpsu.edu.in/view-pdf/mba" target="_blank" class="btn btn-primary">
+                                Know More
+                            </a> 
+                            <!-- <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> -->
+                    </div>
+                  </div>
+
+                               
+                  <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">Lorem Ipsum is simply dummy text of the printing </h3>
+                      <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">Lorem Ipsum is simply dummy text of the printing </h3>
+                      <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">Lorem Ipsum is simply dummy text of the printing </h3>
+                      <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">Lorem Ipsum is simply dummy text of the printing </h3>
+                      <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="announcement-card h-100 p-4 p-lg-5">
+                      <span class="badge-announcement mb-3 d-inline-block">Announcement</span>
+                      <h3 class="h4 fw-bold mb-3">Lorem Ipsum is simply dummy text of the printing </h3>
+                      <p class="text-white-50 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    </div>
+                  </div> -->
+                  
+                  
+                  
+                </div>
+            
+              </div>
+
+        </div>
+    </div>
+  </div>  
+</div>
+</nav>
+          
+        </nav>
+        
+        <!--for main menu bar-->
+        
+</div>
+
+
+
+<!--===========================menu==========================-->
+
+
+</div>
+    </div>
+    
+</section>
+
+</nav>
+
+
+
+
+
+<!-- MAIN MENU BAR -->
+
+
+
+
+
+
+</header>
+
+
+
+<style>
+#interntml-collboration .logo-container { padding: 0 25px; }
+#interntml-collboration .ranking-card { height: 223px; }
+.hrd-logo { padding: 0 105px !important; }
+</style>
+
+<main>
+
+        
+<section id="dep-landing-ppge">
+  <img src="https://snpsu.edu.in/uploads/departments/banner/893793826_2026-04-11_06-22-20.webp" class="img-fluid" alt="dep banner" loading="lazy">
+  <div class="dep-landing-hdd">
+    <div class="dep-lnding-banner-hdd">
+      <h1> Department of Human Resource Development (HRD) </h1> 
+      <div class="back-to-bttn-dv">
+        <a href="https://snpsu.edu.in/" class="btn btn-primary bck-bttnd"> <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"></path>
+</svg> Back </a>
+      </div>  
+    </div>
+  </div>  
+</section>
+
+
+<section id="dep-lan-overview-3hree-items">
+  <div class="dep-inside-bbg">
+  <div class="container-fluid content-wrapper ">
+    
+    <!-- Main Content -->
+    <div class="main-content widget_1">
+
+
+    
+<div class="clearfix"></div>
+
+
+<div id="oervw-para">
+    <div class="row align-items-center g-5">
+      
+      <div class="col-lg-7">
+        <h6 class="text-warning fw-normal text-uppercase mb-3">Department Overview</h6>
+        <h1 class="display-5 fw-normal text-uppercase mb-4 hdd-itm-hdd">Human Resource Development</h1>
+        <p class="lead text-secondary mb-4">
+          </p><p style="margin-bottom:11px"><span style="font-size:12pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><b>Message from the Chief Human Resource Officer,</b></span></span></span></p>
+
+<p style="margin-bottom:11px">Corporate Relations &amp; Industry Partnerships | Placements &amp; Career Support (C&amp;P) | Learning &amp; Development (L&amp;D) | Industry-Institute Innovation Council (IIIC) | Campus Recruitment Training (CRT) | Centre for Life Skills | Consultancy Services | Corporate Centre.<br>
+“At the Department of HRD, we empower students and faculty with industry-relevant skills to thrive in a dynamic professional landscape. Our commitment to growth is driven by enduring industry partnerships and a future-forward vision that ensures our community remains agile, competent, and impactful.”<br>
+&nbsp;</p>
+
+<p style="margin-bottom:11px"><span style="font-size:12pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><b>Empowering People. Strengthening Institutions. Building Futures.</b></span></span></span></p>
+
+<p style="margin-bottom:11px">At Sapthagiri NPS University, we believe that the strength of an institution lies in the strength of its people. The Human Resource Development (HRD) Department serves as the backbone of our university ecosystem by nurturing talent, promoting excellence, and creating a culture of continuous growth.<br>
+The HRD Department is committed to building a vibrant academic environment by attracting, developing, and retaining highly qualified faculty, administrative professionals, and support staff who contribute meaningfully to teaching, research, innovation, and student success.<br>
+&nbsp;</p>
+        <p></p>
+        
+      </div>
+              <div class="col-lg-5">
+        <div class="position-relative text-center">
+          <img src="  https://snpsu.edu.in/uploads/departments/medium/515765261_2026-04-11_06-22-48.webp" alt="Professional Collaboration" class="img-fluid rounded-4 shadow-lg">
+ <div class="clearfix"></div>
+ <h4 class="text-uppercase fw-bold mt-3" style="font-size: 21px;"> Prof.  Gurucharan Singh </h4>
+ <h5 class="text-uppercase fw-bold mt-2" style="font-size: 18px;"> CHRO </h5>
         </div>
       </div>
 
-      <div class="club-name-badge">
-        <div class="name">BUILD CLUB</div>
-        <div class="tagline-sm">Build · Innovate · Dominate</div>
-      </div>
     </div>
+</div>   
 
-    <div class="right-domains">
-      <div class="right-domain-item">
-        <div class="di-icon">💻</div>
-        <div class="di-text">Coding & Development</div>
+<div class="clearfix"></div>
+ 
+<div id="visnmisn-vlue">
+<div class="vision-mission-section py-5">
+  <div class="position-relative">
+    <div class="row g-5 align-items-center">
+      
+      <div class="col-lg-5">
+        <div class="glass-card p-5 shadow-sm border">
+          <h3 class="display-5 fw-normal text-uppercase mb-4 hdd-itm-hdd">Core Values</h3>
+          
+          <div class="d-flex flex-wrap">
+            <p> </p><p>The Human Resource Development (HRD) Department at Sapthagiri NPS University is responsible for strategic workforce planning, recruitment, faculty development, employee engagement, performance management, and institutional growth initiatives.</p>
+ <p></p>
+          </div>
+
+        </div>
       </div>
-      <div class="right-domain-item">
-        <div class="di-icon">🤖</div>
-        <div class="di-text">Robotics & Automation</div>
+
+      <div class="col-lg-7">
+        <div class="ps-lg-4--">
+          <div class="mb-5">
+            
+            <div class="d-flex mb-3">
+              <div class="icon-box flex-shrink-0 me-4">
+                <svg width="23" height="23" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16"> <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"></path>
+  <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"></path></svg>
+              </div>
+              <div class="parag-itm-wdth">
+                <h4 class="fw-normal hd-vsn-hdd">Our Vision</h4>
+                <p class="text-secondary fs-5 lh-base"> </p><ul>
+	<li>To attract and retain highly competent academic and administrative professionals.</li>
+	<li>To foster a culture of continuous learning and professional development.</li>
+	<li>To ensure transparent, fair, and ethical HR practices.</li>
+	<li>To promote diversity, equity, and inclusion across the university.</li>
+	<li>To align human resource strategies with institutional growth goals.</li>
+</ul>
+ <p></p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="icon-box flex-shrink-0 me-4" style="background: #1e293b;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-bullseye" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path> <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"></path> <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"></path> <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path></svg>
+              </div>
+              <div class="parag-itm-wdth">
+                <h4 class="fw-normal hd-vsn-hdd">Our Mission</h4>
+                <p class="text-secondary fs-5 lh-base">  </p><p>To create a dynamic, inclusive, and performance-driven workforce that contributes to academic excellence, research innovation, and institutional leadership at national and global levels.</p>
+<p></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="right-domain-item">
-        <div class="di-icon">✈️</div>
-        <div class="di-text">Aerospace & Drones</div>
-      </div>
-      <div class="right-domain-item">
-        <div class="di-icon">🚀</div>
-        <div class="di-text">Startups & Innovation</div>
-      </div>
+
     </div>
   </div>
+</div>
+</div>    
 
-</div><!-- /hero -->
 
-<!-- Bottom Banner -->
-<div class="bottom-banner">
-  <div>
-    <div class="banner-label">Our Motto</div>
-    <div class="banner-motto">BUILD. <span>INNOVATE.</span> DOMINATE.</div>
+<div class="clearfix"></div>
+
+<div id="additonal-info-objctive">
+    <div class="row mb-3 text-center">
+        <div class="col-lg-12">
+            <h6 class="text-warning fw-normal text-uppercase mb-3">Key Pillars</h6>
+            <h2 class="display-5 fw-normal text-uppercase mb-4 hdd-itm-hdd">Additional Objectives</h2>
+        </div>
+    </div>
+
+    <div class="row g-4">
+                    
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 objective-card">
+                    <div class="card-body p-0">
+                        <div class="icon-circle bg-soft-amber">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Industry Connect</h5>
+                        <p class="text-secondary small">
+                            </p><p><span style="\&quot;font-size:12.0pt\&quot;"><span style="\&quot;line-height:115%\&quot;"><span style="\&quot;font-family:&quot;Aptos&quot;,sans-serif\&quot;">Real-time exposure through industrial visits, hackathons, technology talks, and guest lectures.</span></span></span></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+                    
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 objective-card">
+                    <div class="card-body p-0">
+                        <div class="icon-circle bg-soft-amber">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Career Mentoring: </h5>
+                        <p class="text-secondary small">
+                            Comprehensive support through resume building, mock interviews, and expert-led mentoring
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                    
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 objective-card">
+                    <div class="card-body p-0">
+                        <div class="icon-circle bg-soft-amber">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Faculty Collaboration</h5>
+                        <p class="text-secondary small">
+                            Integrated training initiatives developed in coordination with academic departments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                    
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 objective-card">
+                    <div class="card-body p-0">
+                        <div class="icon-circle bg-soft-amber">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Assessment &amp; Feedback</h5>
+                        <p class="text-secondary small">
+                            Continuous evaluation and performance tracking through analytics and the HRD portal                        </p>
+                    </div>
+                </div>
+            </div>
+
+            </div> 
+</div>
+</div>
+     <!-- Sidebar -->
+    <aside class="sidebar">
+    <button class="mobile-nav-toggle d-lg-none" aria-label="Toggle Menu"> <span>Menu</span> </button>
+  <div id="content-sidemenubar">
+  <div class="close-sidebar-wrapper d-lg-none"> <button class="btn-close btn-close-white" id="close-menu-btn" aria-label="Close"></button> </div>
+    <ul>
+
+       <li>
+  <a href="https://snpsu.edu.in/hrd_content/4">
+    CORPORATE RELATIONS &amp; INDUSTRY PARTNERSHIPS  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/9">
+    Learning &amp; Development (L&amp;D)  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/10">
+    International Affairs &amp; International Career Centre  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/11">
+    Industry–Institute Innovation Council (IIIC)  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/12">
+    Consultancy Services &amp; Corporate Centre  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/13">
+    Core Functions of HRD Department  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/14">
+    HRD Support for Research &amp; Innovation  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/15">
+    HR Technology &amp; Digital Transformation  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/30">
+    HRD Team  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_gallery/31">
+    Gallery  </a>
+</li>
+        <li>
+  <a href="https://snpsu.edu.in/hrd_content/33">
+    Placed Students Details   </a>
+</li>
+         </ul>  
+
+
+
+
+  </div>
+      
+    </aside>
   </div>
 
-  <a class="banner-explore-btn" href="#">
-    Explore Website
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M5 12h14M12 5l7 7-7 7"/>
-    </svg>
-  </a>
+  <script>
+    // Highlight active section in sidebar while scrolling
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".sidebar a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        if (scrollY >= sectionTop) current = section.getAttribute("id");
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sideMenu = document.getElementById("content-sidemenubar");
+  const dismissBtn = document.getElementById("close-menu-btn");
+  const openBtn = document.querySelector(".mobile-nav-toggle");
+  const menuLinks = sideMenu.querySelectorAll("ul li a");
+
+  // Logic to Open Sidebar
+  function openSidebar() {
+    sideMenu.classList.add("active");
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  }
+
+  // Logic to Close Sidebar
+  function closeSidebar() {
+    sideMenu.classList.remove("active");
+    document.body.style.overflow = ""; // Re-enable background scrolling
+  }
+
+  // ✅ Close when clicking a menu link
+  menuLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      // Small timeout allows your getcontnt/getrcontnt functions to fire first
+      setTimeout(() => closeSidebar(), 200);
+    });
+  });
+
+  // ✅ Close when clicking the dismiss icon (X)
+  if (dismissBtn) {
+    dismissBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      closeSidebar();
+    });
+  }
+
+  // ✅ Optional open button (Hamburger Menu)
+  if (openBtn) {
+    openBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      openSidebar();
+    });
+  }
+});
+</script>  
+
+</div></section>
+
+
+
+<section id="interntml-collboration">
+	<div class="container">
+    	<div class="common-heading-centr text-center">
+            <h2 style="font-size: 34px;"> International Collaboration </h2>
+            <h3> A Campus That Inspires Growth </h3>
+        </div>
+  
+  	<div id="owl-demo-17" class="owl-carousel owl-theme owl-loaded owl-drag">
+    	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1487px, 0px, 0px); transition: 0.25s; width: 2231px;"><div class="owl-item" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.iit.edu/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_1.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              Illinois Institute of Technology
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.oxfordinternational.com/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_2.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              Oxford International
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.lincoln.ac.uk/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_3.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              University of Lincoln
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.colostate.edu/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_4.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              Colorado State University
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.cgu.edu/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_5.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              Claremont Graduate University
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.cgu.edu/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_6.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              Claremont Graduate University.
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://uci.edu/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_7.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              University of California, Irvine
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.harrisburgu.edu/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_8.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              Harrisburg University of Science and Technology
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item active" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.wpi.edu/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_9.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              Worcester Polytechnic Institute
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item active" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://laroche.edu/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_10.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              La Roche University
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item active" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.okan.edu.tr/en/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_11.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              Okan University (Istanbul)
+            </div>
+          </div>
+          </a>
+        </div></div><div class="owl-item active" style="width: 175.9px; margin-right: 10px;"><div class="item">
+        <a href="https://www.cam.ac.uk/" target="_blank">
+          <div class="ranking-card">
+            <div class="logo-container">
+              <div class="stars">
+                <img src="https://snpsu.edu.in/images/collaborton_12.webp" class="img-fluid">
+              </div>
+            </div>
+            <div class="footer-text">
+              University of Cambridge
+            </div>
+          </div>
+          </a>
+        </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous"><img src="images/left-arrw.png" class="img-fluid" alt="Left arrow"></span></button><button type="button" role="presentation" class="owl-next disabled"><span aria-label="Next"><img src="images/right-arrw.png" class="img-fluid" alt="Right arrow"></span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
+  
+    </div>
+</section>
+
+
+
+
+<section id="careers-sctn">
+  <div class="container"> 
+      
+
+  <div class="career-logos pt-4">
+    <h4> Fortune 500 Companies Partaking in the Placement Drive </h4>
+
+    <div class="recruitr-logo position-relative">
+      <div class="bg-recruit"></div>
+      <div id="owl-demo-5" class="owl-carousel owl-theme owl-loaded owl-drag">
+		  
+          
+        		  
+          
+        		  
+          
+        		  
+          
+        		  
+          
+        		  
+          
+        		  
+          
+             
+	 <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1735px, 0px, 0px); transition: 0.25s; width: 3719px;"><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/114953703_2026-02-27_10-15-14.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/146316177_2026-02-27_10-15-28.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/561641203_2026-02-27_10-15-35.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/1603663973_2026-02-27_10-15-51.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/410894800_2026-02-27_10-14-18.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/36073148_2026-02-27_10-14-41.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/1965211137_2026-02-27_10-14-59.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item active" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/114953703_2026-02-27_10-15-14.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item active" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/146316177_2026-02-27_10-15-28.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item active" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/561641203_2026-02-27_10-15-35.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/1603663973_2026-02-27_10-15-51.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/410894800_2026-02-27_10-14-18.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/36073148_2026-02-27_10-14-41.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/1965211137_2026-02-27_10-14-59.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item"> <div class="logo-recrters"> <img src="https://snpsu.edu.in/uploads/clients/thumb/114953703_2026-02-27_10-15-14.webp" class="img-fluid" alt="logo name" loading="lazy"> </div> </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous"><img src="images/left-arrw.png" class="img-fluid" alt="Left arrow"></span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next"><img src="images/right-arrw.png" class="img-fluid" alt="Right arrow"></span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>  
+    </div>
+
+  </div>
+
+  </div>
+</section>
+
+
+
+
+	 
+<section id="accredition">
+  <div class="container">
+    <div class="common-heading-centr">
+      <h2> Awards and Recognitions </h2>
+    </div>
+
+    <div id="owl-demo-13" class="owl-carousel owl-theme owl-loaded owl-drag">
+
+
+
+
+
+
+<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1487px, 0px, 0px); transition: 0.25s; width: 2479px;"><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/cisco_20260227113346..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      CISCO    </div>
+  </div>
+</div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/24_20260227113740..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      All India Best Private Engineering Colleges &amp; Universities 2024    </div>
+  </div>
+</div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/59_20260227113817..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      All India Best Engineering Colleges &amp; Universities 2024    </div>
+  </div>
+</div></div><div class="owl-item" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/iso-logo_20260227113245..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      ISO 9001:2015    </div>
+  </div>
+</div></div><div class="owl-item" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/cisco_20260227113346..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      CISCO    </div>
+  </div>
+</div></div><div class="owl-item" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/24_20260227113740..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      All India Best Private Engineering Colleges &amp; Universities 2024    </div>
+  </div>
+</div></div><div class="owl-item active" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/59_20260227113817..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      All India Best Engineering Colleges &amp; Universities 2024    </div>
+  </div>
+</div></div><div class="owl-item cloned active" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/iso-logo_20260227113245..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      ISO 9001:2015    </div>
+  </div>
+</div></div><div class="owl-item cloned active" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/cisco_20260227113346..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      CISCO    </div>
+  </div>
+</div></div><div class="owl-item cloned" style="width: 237.867px; margin-right: 10px;"><div class="item">
+  <div class="ranking-card">
+    <div class="logo-container">
+      <div class="stars">
+        <img src="https://snpsu.edu.in/uploads/accreditations/thumb/24_20260227113740..webp" class="img-fluid">
+      </div>
+    </div>
+    <div class="footer-text">
+      All India Best Private Engineering Colleges &amp; Universities 2024    </div>
+  </div>
+</div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous"><img src="images/left-arrw.png" class="img-fluid" alt="Left arrow"></span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next"><img src="images/right-arrw.png" class="img-fluid" alt="Right arrow"></span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="campus-section" id="gllry-homepge">
+<div class="ovrly-bg-glery"></div>
+    <div class="container">
+        
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+            <div class="common-heading-centr">
+              <h2> Moments from Our Campus </h2>
+              <h3> Capturing Life, Learning, and Memories </h3>
+            </div>
+            <a href="https://snpsu.edu.in/gallery-category/" class="view-all-btn mt-3 mt-md-0">VIEW ALL</a>
+        </div>
+
+
+        <div id="owl-demo-16" class="owl-carousel owl-theme owl-loaded owl-drag">   
+            
+       
+            
+
+            
+        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 248px;"><div class="owl-item active" style="width: 237.867px; margin-right: 10px;"><div class="item">
+                <div class="gallery-card">
+                    <img src="https://snpsu.edu.in/uploads/photogallery/thumb/1103649422_2026-04-17_02-25-58.webp" alt="Students" class="img-fluid" loading="lazy">
+                    <div class="card-overlay">
+                        <span class="card-category">SIMS Placement Drive</span>
+                        <h6 class="card-title-text">Placement</h6>
+                       <a href="https://snpsu.edu.in/gallery-list/28"> <button class="see-photos-btn">SEE PHOTOS</button></a>
+                    </div>
+                </div>
+            </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><span aria-label="Previous"><img src="images/left-arrw.png" class="img-fluid" alt="Left arrow"></span></button><button type="button" role="presentation" class="owl-next disabled"><span aria-label="Next"><img src="images/right-arrw.png" class="img-fluid" alt="Right arrow"></span></button></div><div class="owl-dots disabled"><button role="button" class="owl-dot active"><span></span></button></div></div>
+    </div>
+</section>
+
+
+
+
+
+  
+
+
+
+
+
+
+<section class="final-section">
+  <div class="container">
+    <div class="row g-4">
+      
+      <div class="col-lg-5">  
+      
+      <img src="https://snpsu.edu.in/images/hrd-mmg.webp" class="img-fluid hrd-logo" alt="hrd image" loading="lazy">
+      
+  </div>
+
+      <div class="col-lg-7">
+        <div class="contact-col h-100 shadow-sm">
+          <span class="exec-label">Contact Information</span>
+          <h2 class="exec-name"></h2>
+          <p class="exec-desc">Group CHRO<br><small>Department of Human Resource Development</small></p>
+          
+          <div class="contact-list mt-4">
+            <a href="tel:9008509999" class="contact-link">
+              <div class="icon-square"><i class="bi bi-telephone-fill"></i></div>
+              <span>90085 09999</span>
+            </a>
+            <a href="tel:9611277233" class="contact-link">
+              <div class="icon-square"><i class="bi bi-phone-vibrate"></i></div>
+              <span>96112 77233</span>
+            </a>
+            <a href="mailto:gurucharan.singh@snpsu.edu.in" class="contact-link">
+              <div class="icon-square"><i class="bi bi-envelope-at"></i></div>
+              <span>gurucharan.singh@snpsu.edu.in</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    
+    const animateCounter = (el) => {
+        const target = +el.getAttribute('data-target');
+        const count = +el.innerText;
+        const speed = target / 100; // Adjust for faster/slower animation
+
+        if (count < target) {
+            el.innerText = Math.ceil(count + speed);
+            setTimeout(() => animateCounter(el), 20);
+        } else {
+            el.innerText = target;
+        }
+    };
+
+    // Intersection Observer to trigger when section is scrolled into view
+    const observerOptions = { threshold: 0.5 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target.querySelectorAll('.counter');
+                element.forEach(counter => animateCounter(counter));
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(document.querySelector('.stats-col'));
+});
+</script>
+
+
+
+</main>
+
+
+<div class="clearfix"></div>
+<style>
+#moveTopBtn { position: fixed; bottom: 30px; right: 30px; display: none; z-index: 999; border-radius: 50%; width: 45px; height: 45px; padding: 0; font-size: 18px; }
+</style>
+<button id="moveTopBtn" class="btn btn-warning shadow" style="display: none;">
+    <svg width="26" height="26" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"></path></svg>
+</button>
+<script>
+    const moveTopBtn = document.getElementById("moveTopBtn");
+
+    // Show button when scrolling down
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+            moveTopBtn.style.display = "block";
+        } else {
+            moveTopBtn.style.display = "none";
+        }
+    });
+
+    // Smooth scroll to top
+    moveTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<footer class="text-white">
+  <div class="container">
+    
+    
+
+    <div class="row">
+    
+
+      <div class="col-lg-2 col-md-4 mb-2">
+        <h6 class="text-warning mb-3">happenings</h6>
+        <ul class="list-unstyled small opacity-75">
+ 
+      <li><a href="news-list">News</a></li>
+        <li><a href="events-list">Events</a></li>
+        <!-- <li><a href="blog">Blog</li></a> -->
+        <li><a href="examination">Examination</a></li>
+       <!-- <li><a href="administration">Leadership </li></a>-->
+        <li><a href="newsletter">Newsletter </a></li>
+        <li><a href="results">Results </a></li>
+        <li><a href="https://snpsu.edugrievance.com/" target="blank">Edugrievance </a></li>
+        <!-- <li>Activity & Workshops</li> -->
+        <li><a href="gallery-category">Gallery</a></li>
+        <li>Press Release</li>
+        <li>Media Coverage</li>
+
+        </ul>
+      </div>
+           <div class="col-lg-2 col-md-4 mb-2">
+        <h6 class="text-warning mb-3">Committees </h6>
+        <ul class="list-unstyled small opacity-75">
+      
+
+             
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/AntiRaggingMechanism" class="text-white text-decoration-none">
+               
+               Anti Ragging Mechanism               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/EqualOpportunityCell" class="text-white text-decoration-none">
+               
+               Equal Opportunity Cell               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/GrievanceRedressal" class="text-white text-decoration-none">
+               
+               Grievance Redressal               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/InternalComplaint" class="text-white text-decoration-none">
+               
+               Internal Complaint &amp; Compliance Committee               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/NCC" class="text-white text-decoration-none">
+               
+               NCC               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/NSS" class="text-white text-decoration-none">
+               
+               NSS               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/POSH" class="text-white text-decoration-none">
+               
+               POSH Cell               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/SEDG-" class="text-white text-decoration-none">
+               
+               SEDG Cell               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/StudentWelfareCell" class="text-white text-decoration-none">
+               
+               Student Welfare Cell               
+            </a>
+        </li>
+
+    
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/center/WomenEmpowerment" class="text-white text-decoration-none">
+               
+               Women Empowerment               
+            </a>
+        </li>
+
+        
+        </ul>
+      </div>
+           <div class="col-lg-2 col-md-4 mb-2">
+        <h6 class="text-warning mb-3">Usefull Links </h6>
+        <ul class="list-unstyled small opacity-75">
+                <li class="mb-2">
+            <a href="https://snpsu.edu.in/privacy_policys" class="text-white text-decoration-none">
+               Privacy Policy            </a>
+        </li>
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/currentopenings" class="text-white text-decoration-none">
+               Current Openings            </a>
+        </li>
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/testimonials" class="text-white text-decoration-none">
+               Alumni            </a>
+        </li>
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/unityindiversity" class="text-white text-decoration-none">
+               Unity in diversity            </a>
+        </li>
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/blog" class="text-white text-decoration-none">
+               Blog            </a>
+        </li>
+        <li class="mb-2">
+            <a href="https://heyzine.com/flip-book/8b0b2b7647.html" target="_blank" class="text-white text-decoration-none">
+               SYNAPSE VOL 1 ISSUE 1             </a>
+        </li>
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/contact_us" class="text-white text-decoration-none">
+               Contact us            </a>
+        </li>
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/why-choose-sapthagiri-nps-university" class="text-white text-decoration-none">
+               Why Choose Sapthagiri NPS University            </a>
+        </li>
+        <li class="mb-2">
+            <a href="https://snpsu.edu.in/hostel-and-dining" class="text-white text-decoration-none">
+               Hostel            </a>
+        </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-4 mb-2">
+        <h6 class="text-warning mb-3">Login</h6>
+        <ul class="list-unstyled small opacity-75">
+     
+			
+            
+	
+          <li class="mb-2"><a href=" " class="text-white text-decoration-none">Student Login </a></li>
+          <li class="mb-2"><a href=" " class="text-white text-decoration-none">Staff Login </a></li>
+        	
+        </ul>
+      </div>
+   <div class="col-lg-4 mb-4 text-lg-start">
+        
+	
+         <div class="col-md-12 d-flex align-items-start mb-3">
+        <div class="bg-outline-light border rounded p-2 me-3">
+          <svg width="19" height="19" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"></path></svg>
+        </div>
+        <div>
+          <h6 class="text-warning mb-1 text-decoration-underline">Address</h6>
+          <small class="d-block">#14/5, Chikkasandra, Hesarghatta Main Road,  </small>
+          <small class="d-block">Bengaluru - 560057</small>
+        </div>
+      </div>
+      
+      <div class="col-md-12 d-flex align-items-start mb-3">
+        <div class="bg-outline-light border rounded p-2 me-3">
+          <svg width="19" height="19" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path></svg>
+        </div>
+        <div>
+          <h6 class="text-warning mb-1 text-decoration-underline">Phone</h6>
+		  <small class="d-block">9900072632                                                            
+                                080-28 372800, 080-29633636                                								</small>
+                                           
+          <small class="d-block"> 080-28 372800 / 080-29633636</small>
+		          </div>
+      </div>
+      
+   <div class="col-md-12 d-flex align-items-start mb-3">
+    <div class="bg-outline-light border rounded p-2 me-3">
+        <svg width="19" height="19" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"></path>
+        </svg>
+    </div>
+
+    <div>
+        <h6 class="text-warning mb-1 text-decoration-underline">Email</h6>
+
+        <small class="d-block">admissions@snpsu.edu.in</small>
+        <small class="d-block">director.marketing@snpsu.edu.in</small>
+
+        <!-- ✅ SOCIAL ICONS HERE -->
+       <div class="mt-2 pt-4 border-secondary text-center  social-icon-vertically">
+
+   <ul class="social-icons">
+ <ul>
+        <li> <a href="https://in.linkedin.com/school/sapthagiri-nps-university/" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg> </a> </li>
+  
+       <li> <a href="https://x.com/sapthagirinps" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path></svg> </a> </li>
+       <li> <a href="https://www.instagram.com/sapthagirinpsuniversity?igsh=MWlobHd5eDQzbnNqdQ%3D%3D" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path></svg> </a> </li>
+       <li> <a href="https://www.facebook.com/sapthagirinpsuniversity?mibextid=YMEMSu" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path></svg> </a> </li>
+       <li> <a href="https://www.youtube.com/watch?v=7sC2RyCmEGM&amp;feature=youtu.be" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16"> <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path></svg> </a> </li>
+      </ul>
+
+</ul>
 </div>
 
-</body>
-</html>
+    </div>
+</div>
+    </div>
+        </div>
+
+      <!-- <div class="col-lg-2 col-md-4 mb-4">
+        <h6 class="text-warning mb-3"></h6>
+        <ul class="list-unstyled small opacity-75">
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Overview</a></li>
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Teaching Methodology</a></li>
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">International Students</a></li>
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Student's Achievements</a></li>
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Student Clubs & Societies</a></li>
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+          <li><a href="#" class="text-white text-decoration-none">About us</a></li>
+        </ul>
+      </div> -->
+    </div>
+
+    <div class="mt-4 pt-4 border-secondary text-center social-icon-vertically">
+      <!-- <ul>
+        <li> <a href="https://in.linkedin.com/school/sapthagiri-nps-university/" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg> </a> </li>
+  
+       <li> <a href="https://x.com/sapthagirinps" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg> </a> </li>
+       <li> <a href="https://www.instagram.com/sapthagirinpsuniversity?igsh=MWlobHd5eDQzbnNqdQ%3D%3D" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg> </a> </li>
+       <li> <a href="https://www.facebook.com/sapthagirinpsuniversity?mibextid=YMEMSu" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg> </a> </li>
+       <li> <a href="https://www.youtube.com/watch?v=7sC2RyCmEGM&feature=youtu.be" class="text-warning mx-2"> <svg width="21" height="21" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16"> <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg> </a> </li>
+      </ul> -->
+    </div>
+<div class="container-fluid bg-bllue-fot">
+    <div class="row mt-4 pt-3 border-top border-secondary small opacity-75">
+      <div class="col-md-6 text-center text-md-start">
+        © Copyright 2026, Sapthagiri NPS University - All rights reserved.
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        Website Developed by <a href="https://ibusinesssuite.in/" target="_blank"> iBusiness Suite</a> from <a href="https://initechnologies.com/" target="_blank">INI Technologies Pvt Ltd</a>., Kochi, India
+      </div>
+    </div>
+  </div>
+  
+</footer>
+
+
+
+
+
+
+
+<script src="https://snpsu.edu.in/js/jquery.js"></script> 
+<script src="https://snpsu.edu.in/js/bootstrap.min.js"></script> 
+
+<!--for main menu bar-->
+<script src="https://snpsu.edu.in/js/main-menu.js"></script> 
+<script>
+	$(document).ready(function () {
+		$('.btn-closee_2').click(function () {
+			$('.menu').toggleClass('active');
+		});
+		});
+	$(document).ready(function () {
+		$('.menu-btn').click(function () {
+		$('.menu').toggleClass('active');
+		});
+	});
+</script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const allTabs = document.querySelectorAll('.megamenu [data-bs-toggle="pill"]');
+
+  allTabs.forEach(tabEl => {
+    tabEl.addEventListener('click', function(e) {
+      // Prevent dropdown from closing
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Switch the tab
+      const bsTab = new bootstrap.Tab(this);
+      bsTab.show();
+    });
+  });
+
+  // Keep mega menu open when clicking white space/inner rows
+  const megamenu = document.querySelector('.megamenu');
+  if(megamenu) {
+    megamenu.addEventListener('click', function(e) {
+      if (e.target.tagName !== 'A') {
+        e.stopPropagation();
+      }
+    });
+  }
+});
+
+</script>
+
+<!--for main menu bar-->
+
+<!--toggle menu-->
+<script src="https://snpsu.edu.in/js/pushy.min.js"></script>
+<script src="https://snpsu.edu.in/js/side-menu.js"></script> 
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script> 
+<!--toggle menu-->
+
+<!-- main banner, image and video slider -->
+<script src="https://snpsu.edu.in/js/swiper-bundle.js"></script>
+  <script>
+    const swiper = new Swiper('.mySlider', {
+      loop: true,
+      autoplay: {
+        delay: 4000, // for image slides
+        disableOnInteraction: false,
+      },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+
+    // 🎥 Handle video slides
+    swiper.on('slideChange', () => {
+      // Pause all videos when slide changes
+      document.querySelectorAll('.swiper-slide video').forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+      });
+
+      const activeSlide = swiper.slides[swiper.activeIndex];
+      const video = activeSlide.querySelector('video');
+
+      if (video) {
+        // Pause swiper autoplay while video plays
+        swiper.autoplay.stop();
+        video.play();
+
+        // When video ends, move to next slide
+        video.onended = () => {
+          swiper.slideNext();
+          swiper.autoplay.start();
+        };
+      } else {
+        // If not a video, autoplay continues normally
+        swiper.autoplay.start();
+      }
+    });
+  </script>
+<!-- main banner, image and video slider -->
+
+
+<!--div slider--> 
+<script src="https://snpsu.edu.in/js/common.js"></script> 
+<script src="https://snpsu.edu.in/js/owl.carousel.js"></script> 
+<!--div slider--> 
+
+<script>
+const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+const videoContainer = document.getElementById('videoContainer');
+
+document.querySelectorAll('.video-thumb').forEach(item => {
+  item.addEventListener('click', () => {
+    const type = item.dataset.type;
+    const src = item.dataset.src;
+
+    if (type === 'local') {
+      videoContainer.innerHTML = `
+        <video controls autoplay class="w-100">
+          <source src="${src}" type="video/mp4">
+        </video>`;
+    }
+
+    if (type === 'youtube') {
+      videoContainer.innerHTML = `
+        <iframe width="100%" height="450"
+          src="${src}?autoplay=1"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>`;
+    }
+
+    videoModal.show();
+  });
+});
+
+/* Stop video on close */
+document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+  videoContainer.innerHTML = '';
+});
+</script>
+
+
+<!--menu bar-->
+<script src="https://snpsu.edu.in/js/functions.js"></script> 
+<script type="text/javascript">
+/// some script
+
+// jquery ready start
+$(document).ready(function() {
+	// jQuery code
+
+	//////////////////////// Prevent closing from click inside dropdown
+    $(document).on('click', '.dropdown-menu', function (e) {
+      e.stopPropagation();
+    });
+
+    // make it as accordion for smaller screens
+    if ($(window).width() < 992) {
+	  	$('.dropdown-menu a').click(function(e){
+	  		e.preventDefault();
+	        if($(this).next('.submenu').length){
+	        	$(this).next('.submenu').toggle();
+	        }
+	        $('.dropdown').on('hide.bs.dropdown', function () {
+			   $(this).find('.submenu').hide();
+			})
+	  	});
+	}
+	
+}); // jquery end
+</script>
+<!--menu bar-->
+
+
+
+
+<script>
+$(function() {
+  var $tabButtonItem = $('#tab-button li'),
+      $tabSelect = $('#tab-select'),
+      $tabContents = $('.tab-contents'),
+      activeClass = 'is-active';
+
+  $tabButtonItem.first().addClass(activeClass);
+  $tabContents.not(':first').hide();
+
+  $tabButtonItem.find('a').on('click', function(e) {
+    var target = $(this).attr('href');
+
+    $tabButtonItem.removeClass(activeClass);
+    $(this).parent().addClass(activeClass);
+    $tabSelect.val(target);
+    $tabContents.hide();
+    $(target).show();
+    e.preventDefault();
+  });
+
+  $tabSelect.on('change', function() {
+    var target = $(this).val(),
+        targetSelectNum = $(this).prop('selectedIndex');
+
+    $tabButtonItem.removeClass(activeClass);
+    $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+    $tabContents.hide();
+    $(target).show();
+  });
+});
+</script>  
+
+
+
+
+<!-- news vertical scrller -->
+<script>
+const ticker = document.getElementById('newsTicker');
+const track = document.getElementById('newsTrack');
+let speed = 1; // Pixels per frame. Lower is slower/smoother.
+let scrollAmount = 0;
+let isPaused = false;
+
+// Pause on mouse enter, resume on mouse leave
+ticker.addEventListener('mouseenter', () => isPaused = true);
+ticker.addEventListener('mouseleave', () => isPaused = false);
+
+function step() {
+  if (!isPaused) {
+    scrollAmount += speed;
+    
+    // Move the track up
+    track.style.transform = `translateY(-${scrollAmount}px)`;
+
+    // Check if the first item is completely out of view
+    const firstItem = track.firstElementChild;
+    const itemHeight = firstItem.offsetHeight + 16; // height + margin-bottom (mb-3)
+
+    if (scrollAmount >= itemHeight) {
+      // Move the first item to the bottom of the track
+      track.appendChild(firstItem);
+      // Reset scroll position without a jump
+      scrollAmount -= itemHeight;
+      track.style.transform = `translateY(-${scrollAmount}px)`;
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+// Start the animation
+requestAnimationFrame(step);
+</script>
+<!-- news vertical scrller -->
+
+
+<script>
+const videoModal = document.getElementById('videoModal');
+const container = document.getElementById('popupVideoContainer');
+
+videoModal.addEventListener('show.bs.modal', function (event) {
+  const button = event.relatedTarget; // Button that was clicked
+  const source = button.getAttribute('data-bs-src');
+  const type = button.getAttribute('data-bs-type');
+
+  if (type === 'youtube') {
+    // Inject YouTube Iframe
+    container.innerHTML = `<iframe src="${source}?autoplay=1" allow="autoplay" allowfullscreen></iframe>`;
+  } else {
+    // Inject Local Video Tag
+    container.innerHTML = `
+      <video controls autoplay class="w-100 h-100">
+        <source src="${source}" type="video/mp4">
+      </video>`;
+  }
+});
+
+// Stop video when modal closes
+videoModal.addEventListener('hide.bs.modal', function () {
+  container.innerHTML = '';
+});
+</script>  
+
+<script>
+$(function() {
+  var $tabButtonItem = $('#tab-button_1 li'),
+      $tabSelect = $('#tab-select_1'),
+      $tabContents = $('.tab-contents_1'),
+      activeClass = 'is-active_1';
+
+  $tabButtonItem.first().addClass(activeClass);
+  $tabContents.not(':first').hide();
+
+  $tabButtonItem.find('a').on('click', function(e) {
+    var target = $(this).attr('href');
+
+    $tabButtonItem.removeClass(activeClass);
+    $(this).parent().addClass(activeClass);
+    $tabSelect.val(target);
+    $tabContents.hide();
+    $(target).show();
+    e.preventDefault();
+  });
+
+  $tabSelect.on('change', function() {
+    var target = $(this).val(),
+        targetSelectNum = $(this).prop('selectedIndex');
+
+    $tabButtonItem.removeClass(activeClass);
+    $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+    $tabContents.hide();
+    $(target).show();
+  });
+});
+</script>
+
+
+
+
+ 
+
+
+<script>
+var s=document.createElement("script");
+s.async=true;
+s.src="https://widgets.in6.nopaperforms.com/emwgts.js";
+document.body.appendChild(s);
+</script><script async="" src="https://widgets.in6.nopaperforms.com/emwgts.js"></script>
+
+
+<!-- Niaa Tracking Code -->
+<script>
+var npf_d='http://admissions.snpsu.edu.in';
+var npf_c='6498';
+var npf_m='1';
+
+var s=document.createElement("script");
+s.async=true;
+s.src="https://track.nopaperforms.com/js/track.js";
+document.body.appendChild(s);
+</script><script async="" src="https://track.nopaperforms.com/js/track.js"></script>
+<style>
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a {
+    color: #ffc107;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+
+  </style></body><div></div></html>
