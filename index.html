@@ -14,26 +14,22 @@
     --gold-pale: #f0d080;
     --white: #ffffff;
     --off-white: #f4f1eb;
-    --text-muted: rgba(255,255,255,0.55);
+    /* LIGHT THEME for left/body */
+    --body-bg: #f0f2f5;
+    --text-dark: #0a1628;
+    --text-mid: #2c3e5a;
+    --text-muted-light: #5a6a84;
+    --border-light: #d0d8e8;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: var(--navy);
-    color: var(--white);
+    background: var(--body-bg);
+    color: var(--text-dark);
     font-family: 'Barlow', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
-  }
-
-  /* ── NOISE TEXTURE OVERLAY ── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
   }
 
   /* ── TOP UNIVERSITY BAR ── */
@@ -46,16 +42,19 @@
     gap: 14px;
     position: relative; z-index: 10;
   }
-  .univ-bar img.univ-logo {
-    height: 38px;
-    filter: brightness(0) invert(1);
-    opacity: 0.85;
+  .univ-logo-box {
+    width: 38px; height: 38px;
+    background: rgba(184,137,42,0.2);
+    border: 1px solid rgba(184,137,42,0.4);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
   }
   .univ-bar-text {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.12em;
-    color: var(--text-muted);
+    color: rgba(255,255,255,0.5);
     text-transform: uppercase;
   }
   .univ-bar-text strong {
@@ -96,13 +95,14 @@
     opacity: 0.4;
   }
 
-  /* ── LEFT CONTENT ── */
+  /* ── LEFT CONTENT — LIGHT ── */
   .left {
     padding: 64px 60px 80px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    background: var(--body-bg);
   }
 
   .club-eyebrow {
@@ -129,7 +129,7 @@
     font-size: clamp(64px, 8vw, 110px);
     line-height: 0.9;
     letter-spacing: 0.04em;
-    color: var(--white);
+    color: var(--text-dark);
     animation: fadeUp 0.8s 0.1s ease both;
     margin-bottom: 6px;
   }
@@ -142,7 +142,7 @@
     font-size: 1.15rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: var(--text-muted-light);
     margin-bottom: 36px;
     animation: fadeUp 0.8s 0.18s ease both;
   }
@@ -158,13 +158,13 @@
     font-size: 1.1rem;
     font-weight: 300;
     line-height: 1.75;
-    color: rgba(255,255,255,0.75);
+    color: var(--text-mid);
     max-width: 540px;
     margin-bottom: 40px;
     animation: fadeUp 0.8s 0.3s ease both;
   }
   .tagline strong {
-    color: var(--white);
+    color: var(--text-dark);
     font-weight: 600;
   }
 
@@ -181,19 +181,19 @@
     align-items: center;
     gap: 7px;
     padding: 7px 16px;
-    border: 1px solid rgba(184,137,42,0.35);
+    border: 1px solid rgba(184,137,42,0.4);
     border-radius: 2px;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
+    color: var(--text-mid);
     background: rgba(184,137,42,0.07);
     transition: all 0.25s;
   }
   .domain-chip:hover {
     border-color: var(--gold);
-    color: var(--gold-pale);
+    color: var(--navy);
     background: rgba(184,137,42,0.14);
   }
   .domain-chip .icon { font-size: 1rem; }
@@ -217,7 +217,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: var(--text-muted-light);
     margin-top: 3px;
   }
 
@@ -267,7 +267,7 @@
     align-items: center;
     gap: 14px;
     padding: 12px 20px;
-    border: 1px solid rgba(184,137,42,0.3);
+    border: 1px solid rgba(184,137,42,0.35);
     background: rgba(184,137,42,0.06);
     animation: fadeUp 0.8s 0.7s ease both;
   }
@@ -281,10 +281,10 @@
     font-size: 1rem;
     flex-shrink: 0;
   }
-  .achievement-text { font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
-  .achievement-text strong { color: var(--gold-pale); font-size: 0.85rem; display: block; }
+  .achievement-text { font-size: 0.82rem; color: var(--text-mid); line-height: 1.5; }
+  .achievement-text strong { color: var(--navy); font-size: 0.85rem; display: block; }
 
-  /* ── RIGHT PANEL ── */
+  /* ── RIGHT PANEL — STAYS DARK ── */
   .right {
     background: linear-gradient(175deg, #0d1f3c 0%, #071020 100%);
     display: flex;
@@ -298,7 +298,6 @@
     animation: fadeIn 1s 0.2s ease both;
   }
 
-  /* Decorative corner lines */
   .right::before {
     content: '';
     position: absolute;
@@ -316,7 +315,6 @@
     border-left: 1px solid rgba(184,137,42,0.4);
   }
 
-  /* Glow orb behind logo */
   .logo-glow {
     position: absolute;
     width: 280px; height: 280px;
@@ -345,7 +343,6 @@
     clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
   }
 
-  /* Spinning ring */
   .spin-ring {
     position: absolute; inset: -14px;
     border: 1px dashed rgba(184,137,42,0.3);
@@ -362,47 +359,43 @@
     transform: translateX(-50%);
   }
 
-  .club-logo-img {
+  .club-logo-inner {
     width: 155px; height: 155px;
-    object-fit: contain;
-    filter: drop-shadow(0 0 20px rgba(184,137,42,0.3));
+    background: #111;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 6px;
   }
 
-  /* Club name badge under logo */
-  .club-name-badge {
-    text-align: center;
+  .shield {
+    width: 50px; height: 55px;
+    background: linear-gradient(135deg,#fff 0%,#ccc 100%);
+    clip-path: polygon(50% 0%,100% 18%,100% 65%,50% 100%,0% 65%,0% 18%);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 4px;
   }
-  .club-name-badge .name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 0.2em;
-    color: var(--white);
+  .shield-inner {
+    width: 30px; height: 34px;
+    background: #111;
+    clip-path: polygon(50% 0%,100% 18%,100% 65%,50% 100%,0% 65%,0% 18%);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-size: 0.8rem; font-weight: 900;
   }
-  .club-name-badge .tagline-sm {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-top: 2px;
-  }
+  .logo-univ { font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
+  .logo-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.25em; color: #fff; line-height: 1; }
+
+  .club-name-badge { text-align: center; }
+  .club-name-badge .name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.2em; color: #fff; }
+  .club-name-badge .tagline-sm { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-top: 2px; }
 
   /* Domains vertical list */
   .right-domains {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    max-width: 280px;
+    display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 280px;
   }
   .right-domain-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 14px;
-    border-left: 2px solid transparent;
-    transition: all 0.25s;
-    cursor: default;
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 14px; border-left: 2px solid transparent;
+    transition: all 0.25s; cursor: default;
   }
   .right-domain-item:hover {
     border-left-color: var(--gold);
@@ -414,84 +407,46 @@
     border: 1px solid rgba(184,137,42,0.25);
     border-radius: 4px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 0.95rem;
-    flex-shrink: 0;
+    font-size: 0.95rem; flex-shrink: 0;
   }
   .right-domain-item .di-text {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.82rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.65);
+    font-size: 0.82rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.65);
   }
 
   /* ── BOTTOM BANNER ── */
   .bottom-banner {
     position: relative; z-index: 2;
-    background: linear-gradient(90deg, var(--navy-mid) 0%, rgba(13,31,60,0.9) 100%);
+    background: var(--navy-mid);
     border-top: 1px solid rgba(184,137,42,0.2);
     padding: 22px 60px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    overflow: hidden;
+    display: flex; align-items: center; gap: 24px; overflow: hidden;
   }
   .bottom-banner::before {
     content: 'BUILD. INNOVATE. DOMINATE.  ·  BUILD. INNOVATE. DOMINATE.  ·  BUILD. INNOVATE. DOMINATE.  ·  BUILD. INNOVATE. DOMINATE.';
     position: absolute; inset: 0;
     display: flex; align-items: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.9rem;
-    letter-spacing: 0.3em;
-    color: rgba(184,137,42,0.06);
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0 20px;
+    font-family: 'Bebas Neue', sans-serif; font-size: 0.9rem;
+    letter-spacing: 0.3em; color: rgba(184,137,42,0.06);
+    white-space: nowrap; overflow: hidden; padding: 0 20px;
   }
-  .banner-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-  .banner-motto {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 0.22em;
-    color: var(--white);
-    position: relative; z-index: 1;
-  }
+  .banner-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+  .banner-motto { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.22em; color: #fff; position: relative; z-index: 1; }
   .banner-motto span { color: var(--gold); }
   .banner-explore-btn {
     margin-left: auto;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    display: inline-flex; align-items: center; gap: 10px;
     padding: 12px 28px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
+    border: 1px solid var(--gold); color: var(--gold);
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-decoration: none;
-    position: relative; z-index: 1;
-    transition: all 0.3s;
-    background: transparent;
-    cursor: pointer;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    text-decoration: none; position: relative; z-index: 1;
+    transition: all 0.3s; background: transparent; cursor: pointer;
   }
-  .banner-explore-btn:hover {
-    background: var(--gold);
-    color: var(--navy);
-  }
-  .banner-explore-btn svg {
-    transition: transform 0.25s;
-  }
-  .banner-explore-btn:hover svg {
-    transform: translateX(4px);
-  }
+  .banner-explore-btn:hover { background: var(--gold); color: var(--navy); }
+  .banner-explore-btn svg { transition: transform 0.25s; }
+  .banner-explore-btn:hover svg { transform: translateX(4px); }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -499,16 +454,12 @@
     to   { opacity: 1; transform: translateY(0); }
   }
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; } to { opacity: 1; }
   }
   @keyframes expandW {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
+    from { transform: scaleX(0); } to { transform: scaleX(1); }
   }
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
+  @keyframes spin { to { transform: rotate(360deg); } }
   @keyframes pulse {
     0%, 100% { opacity: 0.5; transform: scale(1); }
     50%       { opacity: 1;   transform: scale(1.08); }
@@ -516,18 +467,9 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    .hero {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-    }
+    .hero { grid-template-columns: 1fr; }
     .hero::after { display: none; }
-    .right {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 40px 24px;
-      min-height: auto;
-    }
+    .right { flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 40px 24px; min-height: auto; }
     .right-domains { flex-direction: row; flex-wrap: wrap; max-width: 100%; }
     .left { padding: 40px 24px; }
     .univ-bar { padding: 10px 24px; }
@@ -538,7 +480,14 @@
 <body>
 
 <!-- University Top Bar -->
- 
+<div class="univ-bar">
+  <div class="univ-logo-box">🎓</div>
+  <div class="univ-bar-text">
+    <strong>Sapthagiri NPS University</strong>
+    Unmatched Excellence, Unlimited Potential
+  </div>
+  <div class="univ-bar-right">Technical Society</div>
+</div>
 
 <!-- Hero Section -->
 <div class="hero">
@@ -553,7 +502,7 @@
     <div class="divider"></div>
 
     <p class="tagline">
-      Build Club is more than a technical society, it's a <strong>launchpad for innovators</strong>. We bring together passionate students from all fields to explore, create, and lead with technology. Through hands-on projects, workshops, and teamwork, members master <strong>emerging technologies</strong> and turn ideas into real solutions.
+      Build Club is more than a technical society — it's a <strong>launchpad for innovators</strong>. We bring together passionate students from all fields to explore, create, and lead with technology. Through hands-on projects, workshops, and teamwork, members master <strong>emerging technologies</strong> and turn ideas into real solutions.
     </p>
 
     <div class="domains">
@@ -578,7 +527,7 @@
       </div>
     </div>
 
-    <a class="cta-btn" href="https://buildclub.snpsu.edu.in/">
+    <a class="cta-btn" href="#">
       <span>Explore Build Club</span>
       <span class="arrow">→</span>
     </a>
@@ -599,16 +548,10 @@
     <div class="club-logo-wrap">
       <div class="club-logo-frame">
         <div class="spin-ring"></div>
-        <!-- Club Logo — black background image with BUILD CLUB text -->
-        <div style="width:155px;height:155px;background:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative;">
-          <!-- Shield/logo mark -->
-          <div style="width:50px;height:55px;background:linear-gradient(135deg,#fff 0%,#ccc 100%);clip-path:polygon(50% 0%,100% 18%,100% 65%,50% 100%,0% 65%,0% 18%);display:flex;align-items:center;justify-content:center;margin-bottom:4px;">
-            <div style="width:30px;height:34px;background:#111;clip-path:polygon(50% 0%,100% 18%,100% 65%,50% 100%,0% 65%,0% 18%);display:flex;align-items:center;justify-content:center;">
-              <span style="color:#b8892a;font-size:0.8rem;font-weight:900;">S</span>
-            </div>
-          </div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.55rem;letter-spacing:0.15em;color:rgba(255,255,255,0.5);text-transform:uppercase;">Sapthagiri NPS</div>
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.25em;color:#fff;line-height:1;">BUILD CLUB</div>
+        <div class="club-logo-inner">
+          <div class="shield"><div class="shield-inner">S</div></div>
+          <div class="logo-univ">Sapthagiri NPS</div>
+          <div class="logo-name">BUILD CLUB</div>
         </div>
       </div>
 
@@ -647,7 +590,7 @@
     <div class="banner-motto">BUILD. <span>INNOVATE.</span> DOMINATE.</div>
   </div>
 
-  <a class="banner-explore-btn" href="https://buildclub.snpsu.edu.in/">
+  <a class="banner-explore-btn" href="#">
     Explore Website
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M5 12h14M12 5l7 7-7 7"/>
